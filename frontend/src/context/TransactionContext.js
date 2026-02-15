@@ -33,14 +33,14 @@ export const TransactionProvider = ({ children }) => {
 
   // GET
   const fetchTransactions = async () => {
-    const res = await fetch('http://localhost:5000/api/transactions');
+    const res = await fetch('https://bellcorp-backend.onrender.com/api/transactions');
     const data = await res.json();
     dispatch({ type: 'SET_TRANSACTIONS', payload: data });
   };
 
   
   const addTransaction = async (transaction) => {
-    const res = await fetch('http://localhost:5000/api/transactions', {
+    const res = await fetch('https://bellcorp-backend.onrender.com/api/transactions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -61,7 +61,7 @@ export const TransactionProvider = ({ children }) => {
 
   // DELETE
   const deleteTransaction = async (id) => {
-    await fetch(`http://localhost:5000/api/transactions/${id}`, {
+    await fetch(`https://bellcorp-backend.onrender.com/api/transactions/${id}`, {
       method: 'DELETE'
     });
     dispatch({ type: 'DELETE_TRANSACTION', payload: id });
