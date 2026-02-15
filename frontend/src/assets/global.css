@@ -1,0 +1,26 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+}
+
+
+button {
+    transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
